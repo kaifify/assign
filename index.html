@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dark Mode Toggle</h1>
+      <button id="darkModeToggle">Dark Mode</button>
+    </header>
+    <main>
+      <p>This is some sample content. Toggle the dark mode to see the effect.</p>
+    </main>
+  </div>
+  <script src="script.js"></script>
+  
+  <script>
+      
+  const darkModeToggle = document.getElementById('darkModeToggle');
+const container = document.querySelector('.container');
+
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeToggle.textContent = 'Light Mode';
+  } else {
+    darkModeToggle.textContent = 'Dark Mode';
+  }
+});
+  </script>
+</body>
+</html>
